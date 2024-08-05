@@ -1,25 +1,37 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barcode scanner</title>
+    <title>Barcode Scanner App</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="print.css" media="print">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
     <div id="app">
-        <h1>Barcode scanner</h1>
-        <input type="text" id="barcodeInput" placeholder="Scan Barcode here">
+        <h1>Barcode Scanner App</h1>
+        <input type="text" id="barcodeInput" placeholder="Scan barcode here">
         <table id="productList">
             <thead>
                 <tr>
-                    <th>Item</th>
-                    <th>Price</th>
+                    <th>No.</th>
+                    <th>Product Name</th>
+                    <th>Price </th>
+                    <th>Quantity</th>
+                    <th>Total</th>
                 </tr>
             </thead>
             <tbody>
-                <!-- 여기에 제품 항목이 추가됩니다 -->
+                <!-- Product items will be added here -->
             </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">Grand Total:</td>
+                    <td id="totalSum">0</td>
+                </tr>
+            </tfoot>
         </table>
         <button id="printButton">Print</button>
     </div>

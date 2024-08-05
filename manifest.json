@@ -1,0 +1,16 @@
+{
+    "name": "Barcode Scanner App",
+    "short_name": "BarcodeApp",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "icons": [
+        {
+            "src": "icon-1024x1024.png",
+            "sizes": "1024x1024",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
