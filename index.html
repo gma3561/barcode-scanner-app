@@ -3,18 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>바코드 스캐너 앱</title>
+    <title>Barcode scanner</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
-        <h1>바코드 스캐너 앱</h1>
-        <input type="text" id="barcodeInput" placeholder="바코드를 스캔하세요">
-        <div id="productInfo">
-            <p>제품명: <span id="productName"></span></p>
-            <p>가격: <span id="productPrice"></span> 원</p>
-        </div>
-        <button id="printButton">인쇄</button>
+        <h1>Barcode scanner</h1>
+        <input type="text" id="barcodeInput" placeholder="Scan Barcode here">
+        <table id="productList">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 여기에 제품 항목이 추가됩니다 -->
+            </tbody>
+        </table>
+        <button id="printButton">Print</button>
     </div>
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="script.js"></script>
