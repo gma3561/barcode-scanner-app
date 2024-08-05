@@ -25,7 +25,8 @@ function addProductToList(name, price) {
     const tbody = document.querySelector('#productList tbody');
     const row = tbody.insertRow();
     const quantity = 1; // 기본 수량을 1로 설정
-    const totalPrice = parseInt(price.replace(/,/g, '')) * quantity; // 가격에서 쉼표 제거 후 정수로 변환
+    const priceValue = parseInt(price.replace(/,/g, '')); // 가격에서 쉼표 제거 후 정수로 변환
+    const totalPrice = priceValue * quantity;
     row.innerHTML = `
         <td>${productCount}</td>
         <td>${name}</td>
@@ -50,7 +51,7 @@ function updateTotalSum() {
         .reduce((sum, row) => {
             return sum + parseFloat(row.cells[4].textContent.replace(/,/g, '')); // parseFloat로 변경하고 쉼표 제거
         }, 0);
-    document.getElementById('totalSum').textContent = totalSum.toFixed(2).toLocaleString(); // 소수점 두 자리까지 표시하고 쉼표 추가
+    document.getElementById('totalSum').textContent = totalSum.toLocaleString(); // 쉼표 추가
 }
 function searchProduct(barcode) {
     if (!gapiInitialized) {
