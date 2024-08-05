@@ -10,7 +10,10 @@
     <div id="app">
         <h1>바코드 스캐너 앱</h1>
         <input type="text" id="barcodeInput" placeholder="바코드를 스캔하세요">
-        <div id="productInfo"></div>
+        <div id="productInfo">
+            <p>제품명: <span id="productName"></span></p>
+            <p>가격: <span id="productPrice"></span> 원</p>
+        </div>
         <button id="printButton">인쇄</button>
     </div>
     <script src="https://apis.google.com/js/api.js"></script>

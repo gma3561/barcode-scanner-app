@@ -5,15 +5,26 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-color: #f0f0f0;
 }
+
 #app {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     text-align: center;
 }
+
 input, button {
     margin: 10px 0;
-    padding: 5px;
+    padding: 10px;
     font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
 }
+
 #productInfo {
     margin-top: 20px;
+    text-align: left;
 }
